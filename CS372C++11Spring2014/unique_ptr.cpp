@@ -28,7 +28,7 @@ class SpaceObject
 {
 public:
     virtual void speak() const=0;
-    virtual bool isDead() const=0;
+    virtual bool isDead(int) const=0;
     virtual ~SpaceObject()
     {}
 };
@@ -51,9 +51,9 @@ public:
         cout << "I'm a bullet with value " << _value << endl;
     }
     
-    virtual bool isDead() const override
+    virtual bool isDead(int modulus) const override
     {
-        return _value%2==1;
+        return _value%modulus==0;
     }
 private:
     int _value;
@@ -77,7 +77,7 @@ public:
         cout << "I'm a star!" << endl;
     }
     
-    virtual bool isDead() const override
+    virtual bool isDead(int) const override
     {
         return false;
     }
@@ -97,7 +97,9 @@ void unique_ptr_main()
         o->speak();
     
     cout << "Killing objects " << endl;
-    v.erase(remove_if(v.begin(),v.end(),[](unique_ptr<SpaceObject> &p){return p->isDead();}),v.end());
+    
+    int m=3;
+    v.erase(remove_if(v.begin(),v.end(),[=,&m](unique_ptr<SpaceObject> &p){return p->isDead(m);}),v.end());
     
     for( auto &o : v)
         o->speak();
