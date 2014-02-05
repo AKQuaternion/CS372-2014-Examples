@@ -84,11 +84,6 @@ public:
 private:
 };
 
-bool killIt(const unique_ptr<SpaceObject> & p)
-{
-    return p->isDead();
-}
-
 void unique_ptr_main()
 {
     vector<unique_ptr<SpaceObject>> v;
@@ -102,7 +97,7 @@ void unique_ptr_main()
         o->speak();
     
     cout << "Killing objects " << endl;
-    v.erase(remove_if(v.begin(),v.end(),killIt),v.end());
+    v.erase(remove_if(v.begin(),v.end(),[](unique_ptr<SpaceObject> &p){return p->isDead();}),v.end());
     
     for( auto &o : v)
         o->speak();
