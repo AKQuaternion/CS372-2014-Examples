@@ -1,18 +1,7 @@
-//
-//  main.cpp
-//  CS372C++11Spring2014
-//
-//  Created by Chris Hartman on 1/22/14.
-//  Copyright (c) 2014 Chris Hartman. All rights reserved.
-//
+void unique_ptr_main();
 
-#include <iostream>
-
-int main(int argc, const char * argv[])
+int main()
 {
-
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    unique_ptr_main();
     return 0;
 }
-
