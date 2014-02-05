@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		49DAEB1C18904C4300D0DFB0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49DAEB1B18904C4300D0DFB0 /* main.cpp */; };
-		49DAEB1E18904C4300D0DFB0 /* CS372C__11Spring2014.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 49DAEB1D18904C4300D0DFB0 /* CS372C__11Spring2014.1 */; };
+		492DFE0318A2BE3E003203BC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 492DFE0218A2BE3E003203BC /* main.cpp */; };
+		49DAEB1C18904C4300D0DFB0 /* unique_ptr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49DAEB1B18904C4300D0DFB0 /* unique_ptr.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -18,16 +18,15 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				49DAEB1E18904C4300D0DFB0 /* CS372C__11Spring2014.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		492DFE0218A2BE3E003203BC /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		49DAEB1818904C4300D0DFB0 /* CS372C++11Spring2014 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "CS372C++11Spring2014"; sourceTree = BUILT_PRODUCTS_DIR; };
-		49DAEB1B18904C4300D0DFB0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		49DAEB1D18904C4300D0DFB0 /* CS372C__11Spring2014.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = CS372C__11Spring2014.1; sourceTree = "<group>"; };
+		49DAEB1B18904C4300D0DFB0 /* unique_ptr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = unique_ptr.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +59,8 @@
 		49DAEB1A18904C4300D0DFB0 /* CS372C++11Spring2014 */ = {
 			isa = PBXGroup;
 			children = (
-				49DAEB1B18904C4300D0DFB0 /* main.cpp */,
-				49DAEB1D18904C4300D0DFB0 /* CS372C__11Spring2014.1 */,
+				49DAEB1B18904C4300D0DFB0 /* unique_ptr.cpp */,
+				492DFE0218A2BE3E003203BC /* main.cpp */,
 			);
 			path = "CS372C++11Spring2014";
 			sourceTree = "<group>";
@@ -117,7 +116,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49DAEB1C18904C4300D0DFB0 /* main.cpp in Sources */,
+				492DFE0318A2BE3E003203BC /* main.cpp in Sources */,
+				49DAEB1C18904C4300D0DFB0 /* unique_ptr.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +225,7 @@
 				49DAEB2318904C4300D0DFB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
