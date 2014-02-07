@@ -17,6 +17,8 @@ using std::vector;
 using std::pair;
 #include <memory>
 using std::unique_ptr;
+#include <functional>
+using std::function;
 
 template<typename T, typename... Args>
 std::unique_ptr<T> make_unique(Args&&... args)
@@ -99,7 +101,10 @@ void unique_ptr_main()
     cout << "Killing objects " << endl;
     
     int m=3;
-    v.erase(remove_if(v.begin(),v.end(),[=,&m](unique_ptr<SpaceObject> &p){return p->isDead(m);}),v.end());
+    auto killIt = [m](unique_ptr<SpaceObject> &p){return p->isDead(m);};
+    function< bool (unique_ptr<SpaceObject> &p)> x = killIt;
+    using std::placeholders::_1;
+    v.erase(remove_if(v.begin(),v.end(),x),v.end());
     
     for( auto &o : v)
         o->speak();
