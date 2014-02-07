@@ -1,7 +1,8 @@
 void unique_ptr_main();
+void async_main();
 
 int main()
 {
-    unique_ptr_main();
+    async_main();
     return 0;
 }
