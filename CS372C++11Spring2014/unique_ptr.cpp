@@ -101,8 +101,8 @@ void unique_ptr_main()
     cout << "Killing objects " << endl;
     
     int m=3;
-    auto killIt = [m](unique_ptr<SpaceObject> &p){return p->isDead(m);};
-    function< bool (unique_ptr<SpaceObject> &p)> x = killIt;
+    auto killIt = [m](const unique_ptr<SpaceObject> &p){return p->isDead(m);};
+    function< bool (const unique_ptr<SpaceObject> &p)> x = killIt;
     using std::placeholders::_1;
     v.erase(remove_if(v.begin(),v.end(),x),v.end());
     
